@@ -1,7 +1,6 @@
 package com.couture.utils;
 
 import com.couture.dto.UserDTO;
-import com.couture.entity.User;
 
 /**
  * @author Couture
@@ -12,7 +11,7 @@ import com.couture.entity.User;
 public class UserHolder {
     private static final ThreadLocal<UserDTO> tl = new ThreadLocal<>();
 
-    public static void saveUser(User user){
+    public static void saveUser(UserDTO user){
         tl.set(user);
     }
 
